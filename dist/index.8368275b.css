@@ -1,0 +1,29 @@
+html, body {
+  box-sizing: border-box;
+}
+
+*, :before, :after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #333;
+}
+
+.main__heading {
+  color: #858585;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.puzzle__area {
+  max-width: calc(100% - 60px);
+  min-height: 600px;
+  background: #595959;
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 30px;
+  position: relative;
+}
+
+/*# sourceMappingURL=index.8368275b.css.map */
