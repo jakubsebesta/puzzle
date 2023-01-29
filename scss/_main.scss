@@ -19,13 +19,24 @@ body{
 }
 
 .puzzle__area{
-    background:lighten($background, 15%);
-    max-width: calc(100% - 60px);
+    background: lighten($background, 15%);
+    background-size: calc(100% - 60px);
+    max-width: 92%;
     min-height:600px;
     margin: 0 auto;
     border-radius: $border-radius;
     padding: 30px;
     position: relative;
-   
+   &::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95%;
+    height: 100%;
+    transform: rotate(3deg);
+    background: url('../assets/slovakia.png')center center no-repeat;
+    background-size: contain;
   
+}
 }

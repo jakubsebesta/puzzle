@@ -17,13 +17,24 @@ body {
 }
 
 .puzzle__area {
-  max-width: calc(100% - 60px);
+  max-width: 92%;
   min-height: 600px;
-  background: #595959;
+  background: #595959 0 0 / calc(100% - 60px);
   border-radius: 15px;
   margin: 0 auto;
   padding: 30px;
   position: relative;
+}
+
+.puzzle__area:before {
+  content: "";
+  width: 95%;
+  height: 100%;
+  background: url("slovakia.e865d57b.png") center / contain no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(3deg);
 }
 
 /*# sourceMappingURL=index.8368275b.css.map */
