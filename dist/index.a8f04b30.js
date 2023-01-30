@@ -563,7 +563,9 @@ var _styleScss = require("../scss/style.scss");
     var regions = area.children();
     while(regions.length)area.append(regions.splice(Math.floor(Math.random() * regions.length), 1)[0]);
 });
-$("#bratislava, #trnava, #zilina, #presov, #kosice, #trencin, #banska, #nitra").draggable();
+$("#bratislava, #trnava, #zilina, #presov, #kosice, #trencin, #banska, #nitra").draggable({
+    revert: "invalid"
+});
 var regionData = {
     "#bratislava": "#bratislava-drop",
     "#trnava": "#trnava-drop",
@@ -577,8 +579,12 @@ var regionData = {
 $.each(regionData, function(region, regionDrop) {
     $(regionDrop).droppable({
         accept: region,
+        classes: {
+            "ui-droppable-active": "ui-state-active",
+            "ui-droppable-hover": "ui-state-hover"
+        },
         drop: function(event, ui) {
-            $(region).fadeOut();
+            $(this).addClass("ui-state-highlight");
         }
     });
 });

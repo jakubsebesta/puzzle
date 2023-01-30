@@ -15,7 +15,7 @@ import "../scss/style.scss";
 
     });
 
-   $('#bratislava, #trnava, #zilina, #presov, #kosice, #trencin, #banska, #nitra').draggable();
+   $('#bratislava, #trnava, #zilina, #presov, #kosice, #trencin, #banska, #nitra').draggable({ revert: "invalid" });
 
 
   var regionData = {'#bratislava':'#bratislava-drop' ,'#trnava' : '#trnava-drop',
@@ -31,8 +31,14 @@ import "../scss/style.scss";
   $.each(regionData, function(region, regionDrop){
    $(regionDrop).droppable({
         accept:region,
+        classes: {
+            "ui-droppable-active": "ui-state-active",
+            "ui-droppable-hover": "ui-state-hover"
+          },
         drop: function(event, ui){
-            $(region).fadeOut();
+            $( this )
+            .addClass( "ui-state-highlight" );
+            
         }
    });
 
