@@ -20,9 +20,8 @@ body{
 
 .puzzle__area{
     background: lighten($background, 15%);
-    background-size: calc(100% - 60px);
-    max-width: 92%;
-    min-height:600px;
+    max-width: 1250px;
+    min-height:1320px;
     margin: 0 auto;
     border-radius: $border-radius;
     padding: 30px;
@@ -39,4 +38,84 @@ body{
     background-size: contain;
   
 }
+}
+
+#bratislava-drop{
+    
+    display: inline-block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 1%;
+    top: 52%;
+}
+
+#trnava-drop{
+   
+    display: inline-block;
+    position: absolute;
+    width: 70px;
+    height: 160px;
+    left: 10%;
+    top: 50%;
+}
+
+#trencin-drop{
+   
+    display: inline-block;
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 20%;
+    top: 42%;
+}
+
+#nitra-drop{
+    
+    display: inline-block;
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 18%;
+    top: 55%;
+}
+
+#banska-drop{
+    
+    display: inline-block;
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    left: 38%;
+    top: 50%;
+}
+
+#zilina-drop{
+   
+    display: inline-block;
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    left: 36%;
+    top: 30%;
+}
+
+#presov-drop{
+
+    display: inline-block;
+    position: absolute;
+    width: 230px;
+    height: 100px;
+    left: 66%;
+    top: 35%;
+}
+
+#kosice-drop{
+  
+    display: inline-block;
+    position: absolute;
+    width: 230px;
+    height: 100px;
+    left: 66%;
+    top: 48%;
 }

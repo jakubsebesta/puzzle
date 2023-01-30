@@ -3,17 +3,6 @@
 import "../scss/style.scss";
 
 
-
-
-
-
-
-
-
-
-
-
-
     /*randomizer*/
     $(function () {
         var area = $(".puzzle__area");
@@ -26,12 +15,28 @@ import "../scss/style.scss";
 
     });
 
-   $('#bratislava, #trnava, #zilina, #presov, #kosice, #trencin, #banska_bystrica, #nitra').draggable();
+   $('#bratislava, #trnava, #zilina, #presov, #kosice, #trencin, #banska, #nitra').draggable();
 
 
+  var regionData = {'#bratislava':'#bratislava-drop' ,'#trnava' : '#trnava-drop',
+'#trencin':'#trencin-drop',
+'#nitra':'#nitra-drop',
+'#zilina':'#zilina-drop',
+'#presov':'#presov-drop',
+'#kosice':'#kosice-drop',
+'#banska':'#banska-drop'
+}
 
 
+  $.each(regionData, function(region, regionDrop){
+   $(regionDrop).droppable({
+        accept:region,
+        drop: function(event, ui){
+            $(region).fadeOut();
+        }
+   });
 
+  });
 
 
 
